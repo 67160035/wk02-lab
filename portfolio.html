@@ -8,43 +8,82 @@
   <body>
     <header>
       <h1>Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="/">หน้าแรก</a></li>
-          <li><a href="/about">เกี่ยวกับเรา</a></li>
-        </ul>
-      </nav>
+      <hr />
     </header>
     <main>
       <article>
         <h2>1. About section</h2>
         <p>About me</p>
         <picture>
-          <source media="(min-width:650px)" srcset="img_pink_flowers.jpg" />
+          <source media="(min-width:650px)" srcset="Picture/" />
           <source media="(min-width:465px)" srcset="img_white_flower.jpg" />
-          <img src="img_orange_flowers.jpg" alt="Me" style="width: auto" />
+          <img src="img_orange_flowers.jpg" style="width: auto" />
         </picture>
-        <p>Name : <br />Age : <br />Birthdate :<br /></p>
+        <p>
+          Name : นางสาวปาฏลี แก้วมณี <br />Age : 19 ปี<br />Birthdate : วันที่
+          27 เดือน ธันวาคม พ.ศ. 2548<br />
+        </p>
+        <p>
+          ดิฉันนิสิตคณะวิทยาการสารสนเทศ
+          สาขาเทคโนโลยีสารสนเทศเพื่ออุตสาหกรรมดิจิทัล มีความสนใจด้านการพัฒนาแอป
+          ระบบสารสนเทศ และเทคโนโลยีดิจิทัล
+          พร้อมนำความรู้ไปประยุกต์แก้ปัญหาในงานจริง.
+        </p>
         <h3>2. Portfolio section</h3>
         <p>List of projects</p>
         <figure>
-          <img src="pic_trulli.jpg" alt="Trulli" style="width: 100%" />
-          <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+          <img src="Picture/Blog.png" alt="semantic HTML" style="width: 30%" />
+          <figcaption>สร้างหน้าเว็บ blog ด้วย semantic HTML</figcaption>
+        </figure>
+        <figure>
+          <img src="Picture/Regis.png" alt="HTML" style="width: 30%" />
+          <figcaption>สร้างฟอร์มลงทะเบียน</figcaption>
         </figure>
         <h4>3. Contact section</h4>
-        <p>Contact form</p>
+        <form action="/register" method="POST">
+  <fieldset>
+    <legend>ข้อมูลส่วนตัว</legend>
+    <label for="fname">ชื่อจริง:</label>
+    <input type="text" id="fname" name="firstname" required />
+    <label for="lname">นามสกุล:</label>
+    <input type="text" id="lname" name="lastname" required /><br />
+    <label for="email">อีเมล:</label>
+    <input type="email" id="email" name="email" required />
+    <label for="birthdate">วันเกิด:</label>
+    <input type="date" id="birthdate" name="birthdate" />
+
+    <fieldset>
+      <legend>เพศ:</legend>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">ชาย</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">หญิง</label>
+      <input type="radio" id="else" name="gender" value="else" />
+      <label for="else">อื่นๆ</label>
+    </fieldset>
+
+    <label for="country">ประเทศ:</label>
+    <select id="country" name="country">
+      <option value="">--เลือกประเทศ--</option>
+      <option value="th">ไทย</option>
+      <option value="us">สหรัฐอเมริกา</option>
+    </select>
+    <legend>ข้อมูลเพิ่มเติม:</legend>
+    <label for="message">
+    <textarea id="message" name="message" rows="5" cols="40"></textarea><br>
+    <input type="checkbox" id="agree" name="agree" />
+    <label for="agree">ฉันยอมรับเงื่อนไขการใช้บริการ</label>
+  </fieldset>
+
+  <button type="submit">ส่งข้อมูล</button>
+  <button type="reset">ยกเลิก</button>
+</form>
+
       </article>
     </main>
-    <!-- 1. About section -->
-    <!-- - หัวข้อ -->
-    <!-- - รูปภาพตัวเอง <img> -->
-    <!-- - ข้อมูลประกอบ -->
-    <!-- 2. Portfolio section -->
-    <!-- - List of projects ใช้ <figure> และ <figcaption> -->
-    <!-- 3. Contact section -->
-    <!-- - Contact form -->
     <footer>
       <p>&copy; 2025 My Website</p>
+      <hr />
     </footer>
   </body>
 </html>
